@@ -1,0 +1,12 @@
+<mapper namespace="test">
+	<!-- select标签，封装了SQL语句信息、入参类型、结果映射类型 -->
+	<select id="findUserById" parameterType="java.lang.Integer"
+		resultType="test.mytatis.zsl.com.entity.User" statementType="prepared">
+		SELECT * FROM USER WHERE id = #{id}
+	</select>
+
+	<select id = "findUserByName" parameterType="java.lang.String"
+			resultType="test.mytatis.zsl.com.entity.User" statementType="PREPARED">
+		SELECT * FROM USER WHERE NAME = #{name}
+	</select>
+</mapper>
